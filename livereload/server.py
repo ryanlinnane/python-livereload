@@ -265,6 +265,12 @@ class Server:
             'var port=%s;'
             's.src="//"+window.location.hostname+":"+port'
             '+ "/livereload.js?port=" + port;'
+            
+            'var path=window.location.pathname.match(/\/code\/proxy\/\d+/);'
+            'if (path) {'
+              's.src="//"+window.location.hostname" +path[0]'
+              '+ "/livereload.js?port=" + port;'
+            '}'
             'document.head.appendChild(s);'
             '})();</script>'
         )
