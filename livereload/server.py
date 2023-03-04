@@ -268,7 +268,7 @@ class Server:
             
             'var path=window.location.pathname.match(/\/code\/proxy\/\d+/);'
             'if (path) {'
-              's.src="//"+window.location.hostname" +path[0]'
+              's.src="//"+window.location.hostname + path[0]'
               '+ "/livereload.js?port=" + port;'
             '}'
             'document.head.appendChild(s);'
